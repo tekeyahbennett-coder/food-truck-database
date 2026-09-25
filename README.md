@@ -31,8 +31,7 @@ A normalized relational database schema designed for a food truck business, buil
 
 1. Open SQL Server Management Studio
 2. Connect to your SQL Server instance
-3. Run `schema.sql` to create the database and tables
-4. Run `seed.sql` to populate with sample data (if included)
+3. Run `schema.sql` to create the database and all five tables with their foreign key relationships
 
 ## Author
 

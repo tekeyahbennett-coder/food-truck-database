@@ -1,0 +1,35 @@
+CREATE TABLE FoodTruck (
+    TruckID INT PRIMARY KEY IDENTITY(1,1),
+    TruckName VARCHAR(100),
+    CuisineType VARCHAR(50)
+);
+
+CREATE TABLE MenuItems (
+    ItemID INT PRIMARY KEY IDENTITY(1,1),
+    ItemName VARCHAR(100),
+    Price DECIMAL(5,2),
+    TruckID INT,
+    FOREIGN KEY (TruckID) REFERENCES FoodTruck(TruckID)
+);
+
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY IDENTITY(1,1),
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50)
+);
+
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY IDENTITY(1,1),
+    CustomerID INT,
+    OrderDate DATETIME,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+CREATE TABLE OrderItems (
+    OrderItemID INT PRIMARY KEY IDENTITY(1,1),
+    OrderID INT,
+    ItemID INT,
+    Quantity INT,
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    FOREIGN KEY (ItemID) REFERENCES MenuItems(ItemID)
+);
