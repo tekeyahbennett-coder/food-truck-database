@@ -20,18 +20,22 @@ A normalized relational database schema designed for a food truck business, buil
 - IDENTITY-based primary keys on all tables
 - Foreign key constraints enforcing referential integrity
 - Supports full order lifecycle: browse menu → place order → track items
+- Seed data (`seed_data.sql`) for 4 trucks, 16 menu items, 6 customers, and 8 orders
+- Sample queries (`queries.sql`) covering joins, aggregates, and subqueries for real business questions (revenue by truck, best sellers, top customers, average order value)
 
 ## Tech Stack
 
 - **Database:** SQL Server / T-SQL
 - **Tools:** SQL Server Management Studio (SSMS)
-- **Concepts:** Relational design, normalization, entity-relationship modeling, foreign keys
+- **Concepts:** Relational design, normalization, entity-relationship modeling, foreign keys, aggregate queries
 
 ## How to Run
 
 1. Open SQL Server Management Studio
 2. Connect to your SQL Server instance
 3. Run `schema.sql` to create the database and all five tables with their foreign key relationships
+4. Run `seed_data.sql` to populate the tables with sample data
+5. Run any of the queries in `queries.sql` to explore the data (menu listings, order details, revenue by truck, best-selling items, top customers, and more)
 
 ## Author
 
